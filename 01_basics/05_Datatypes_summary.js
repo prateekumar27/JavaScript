@@ -49,6 +49,37 @@ const myFunc = function(){
 }
 
 
+//++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+// stack ( primitive ),  heap( non- primitive)
+ //stack you get a copy of whatever vairable youve declared
+
+ let room = 101
+ let frndroom = room
+
+ frndroom = 202
+ console.log(room); 101
+ console.log(frndroom);202
+
+ //output 101 202
+ 
+
+ //whenever a memory id defined inside the heap you get a refrence to the original
+
+ let house1 = {
+  color: "Blue"
+};
+
+let house2 = house1;
+
+house2.color = "Red";
+
+console.log(house1.color);
+
+
+
+
+
 
 
 
