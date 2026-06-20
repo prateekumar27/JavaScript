@@ -29,7 +29,22 @@ const dcHeroes = ["superman", "flash", "batman"]
 //built in method used to check a value is an array or not
 console.log(Array.isArray("Prateek")); //false
 
-//
+//ARRAY.FROM
+//it will convert string, array like obj into an array
+console.log(Array.from("Prateek"));
+
+//ARRAY.OF
+// return a new array from a set of elements
+let score1 = 10
+let score2 = 20
+let score3= 30
+let score4 = 40
+console.log(Array.of(score1,score2,score3,score4));
+
+
+
+
+
 
 
 
