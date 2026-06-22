@@ -54,31 +54,66 @@ const tinderUser = new Object() //singleton object
 
 //object nesting 
 
-const regularUser = {
-    userName : {
-        name : {
-            fullname : {
-                firstname : "Prateek",
-                lastname : "Kumar"
-            }
-        }
-    }
-}
+// const regularUser = {
+//     userName : {
+//         name : {
+//             fullname : {
+//                 firstname : "Prateek",
+//                 lastname : "Kumar"
+//             }
+//         }
+//     }
+// }
 
 
 //merging two or more objects
+//assign
+//spread
 
-const obj1 = {
-    1: "a",
-    2: "b"
-}
-const obj2 = {
-    3: "a",
-    4: "b"
+// const obj1 = {
+//     1: "a",
+//     2: "b"
+// }
+// const obj2 = {
+//     3: "a",
+//     4: "b"
+// }
+
+// const obj3 = Object.assign({}, obj1, obj2) //target and source, all the value is going to obj1 if target {} is not given, syntaxically
+// console.log(obj3);
+
+// const obj3 = {...obj1, ...obj2}
+// console.log(obj3);
+
+
+////////////////////
+
+// console.log(user);
+// console.log(Object.keys(user)); //keys will come in array format
+
+// console.log(Object.entries(user));// key and pair convert in an array
+
+
+/////OBJECT DESTRUCTURE //////
+
+const course = {
+    coursename : "JS",
+    price : "9999",
+    courseInstructor : "Prateek"
 }
 
-const obj3 = Object.assign({}, obj1, obj2) //target and source, all the value is going to obj1 if target {} is not given, syntaxically
-console.log(obj3);
+const { coursename, courseInstructor, price } = course
+
+console.log(coursename);
+console.log(courseInstructor);
+console.log(price);
+
+
+ 
+
+
+
+
 
 
 
