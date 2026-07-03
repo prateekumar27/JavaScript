@@ -14,5 +14,47 @@
 // }
 
 
+// let myArray = ["flash", "batman", "superman"]
+// for (let i = 0; i < myArray.length; i++) {  
+//     console.log(myArray[i]); 
+// }
+
+
+//break and continue
+
+// for (let i = 0; i <= 20; i++) {
+//     if (i === 5) {
+//         console.log("Detacted 5");
+//         break 
+//     }
+//     console.log(`value of i is ${i}`);  
+// }
+
+// for (let i = 0; i <= 20; i++) {
+//     if (i === 5) {
+//         console.log("Detacted 5");
+//         continue  // conditioned will skipped for once
+//     }
+//     console.log(`value of i is ${i}`);  
+// }
+
+//++++++++++++++++++++++++++++++++++++++++++++++++
+
+//while
+
+// let i = 0
+// while(i <= 10){
+//     console.log(`Value of i ${i}`);
+//     i = i + 2
+// }
+
+//  dowhile
+
+// let score = 1
+// do {
+//     console.log(`${score}`);
+//     score++
+// } while (score <= 10);
+
 
 
