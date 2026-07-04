@@ -1,11 +1,48 @@
 //for of loop
+//array specific loops
 
- 
+const arr = [1, 2, 3, 4, 5]
+for (const num of arr) {
+    console.log(num);   
+}
 
 
 //map is an object holds key value pair and remember the original insertion order of the keys and unique value
 //maps are nor itreaable
-//object dosnt remmember 
+
+//object dosnt remmember and  forof doesnt work on OBJECTS, BUT forIN work
+
+const map = new Map()
+map.set("IN", "INDIA")
+map.set("USA", "USA")
+map.set("FR", "FRANCE")
+for (const [key, value] of map) { //array destructure
+    console.log(key, ":-", value);   
+}
+
+//++++++++++++++++++++++++++++++++++++
+//FOR IN LOOP
+//OBJECTS
+const myObjects = {
+    js: "javascript",
+    cpp: "c++",
+    rb: "ruby",
+    swift: "swift by apple"
+}
+for (const key in myObjects) {
+      console.log(`${key} shortcut is for ${myObjects[key]}`);    
+}
+
+//ARRAY
+//array keys 01234
+const programming = ["js", "rb", "py", "java", "cpp"]
+for (const key in programming) {
+       console.log(programming[key]);        
+}
+
+
+
+
 
 //++++++++++++++++
 //FOR EACH LOOP
@@ -26,4 +63,25 @@ coding.forEach(printMe)
 
 coding.forEach((item, index, arr)=> {
     console.log(item, index, arr);  
+})
+
+
+const myCoding = [
+    {
+        languageName: "javascript",
+        languageFileName: "javascript"
+    },
+    {
+        languageName: "java",
+        languageFileName: "java"
+    },
+    {
+        languageName: "python",
+        languageFileName: "python"
+    }
+]
+
+myCoding.forEach( (item) => {
+console.log(item.languageName);
+
 })
