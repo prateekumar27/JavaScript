@@ -12,12 +12,37 @@
   
 </body>
 <script>
-  function addlang (lang){
-const li = document.createElement("li")
-li.innerHTML = lang
-document.querySelector(".language").appendChild(li)
+  //tree travers document // optimazation issue
+//   function addlang (lang){
+// const li = document.createElement("li")
+// li.innerHTML = lang
+// document.querySelector(".language").appendChild(li)
+//   }
+//   addlang("Java")
+//   addlang("Python")
 
-  }
-  addlang("Java")
+  //optimaze way
+function addoptiLanguage(langName){
+  const li = document.createElement("li")
+  li.appendChild(document.createTextNode(langName))
+  document.querySelector(".language").appendChild(li)
+}
+addoptiLanguage("Java")
+addoptiLanguage("Python")
+
+//EDIT
+
+const editLang = document.querySelector("li:nth-child(3)")
+//new elemt
+const newli =document.createElement("li")
+newli.textContent="C++"
+editLang.replaceWith(newli)
+
+//EDIT REMOVE
+
+const lastLang = document.querySelector("li:last-child")
+lastLang.remove()
+
+
 </script>
 </html>
