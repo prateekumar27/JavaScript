@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+
+  <body>
+    <ul id="image">
+      <li id="nature">
+        <img src="https://picsum.photos/id/10/300/200" alt="Nature" />
+      </li>
+
+      <li id="desk">
+        <img src="https://picsum.photos/id/20/300/200" alt="desk" />
+      </li>
+
+      <li id="cup">
+        <img src="https://picsum.photos/id/30/300/200" alt="cup" />
+      </li>
+
+      <li id="nose">
+        <img src="https://picsum.photos/id/40/300/200" alt="nose" />
+      </li>
+
+      <li id="beach">
+        <img src="https://picsum.photos/id/50/300/200" alt="Beach" />
+      </li>
+    </ul>
+  </body>
+  <script>
+    //event propogation = means bubling up, goes from down to up flow image >li > ul tracking of an elemt from inside to outside
+    //event bubling = false
+    //event cupturing = true
+    document.getElementById("image").addEventListener(
+      "click",
+      function (e) {
+        console.log("clicked inside ul");
+      },
+      false,
+    );
+
+    document.getElementById("nose").addEventListener(
+      "click",
+      function (e) {
+        console.log("nose clicked");
+        e.stopPropagation() //it will stop bubbling
+      },
+      false,
+    );
+
+    // //remove images
+    // document.querySelector(".image").addEventListener("click", function (e) {
+    //   // console.log(e.target.parentNode);
+    //   console.log(e.target.tagName);
+    //   if (e.target.tagName === 'IMG') {
+    //     let removeIt = e.target.parentNode;
+    //     removeIt.remove();
+    //     // removeIt.parentNode.removeChild(removeIt);
+    //   }
+    // });
+  </script>
+</html>
