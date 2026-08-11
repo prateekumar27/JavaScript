@@ -30,9 +30,11 @@
     </ul>
   </body>
   <script>
+    //event listener gives you propagation ability
     //event propogation = means bubling up, goes from down to up flow image >li > ul tracking of an elemt from inside to outside
+    //two context
     //event bubling = false
-    //event cupturing = true
+    //event cupturing = true //topss to bottom
     document.getElementById("image").addEventListener(
       "click",
       function (e) {
@@ -45,20 +47,21 @@
       "click",
       function (e) {
         console.log("nose clicked");
-        e.stopPropagation() //it will stop bubbling
+        e.stopPropagation()
+         //it will stop bubbling
       },
       false,
     );
 
     // //remove images
-    // document.querySelector(".image").addEventListener("click", function (e) {
-    //   // console.log(e.target.parentNode);
-    //   console.log(e.target.tagName);
-    //   if (e.target.tagName === 'IMG') {
-    //     let removeIt = e.target.parentNode;
-    //     removeIt.remove();
-    //     // removeIt.parentNode.removeChild(removeIt);
-    //   }
-    // });
+    document.querySelector(".image").addEventListener("click", function (e) {
+      // console.log(e.target.parentNode);
+      console.log(e.target.tagName);
+      if (e.target.tagName === 'IMG') {
+        let removeIt = e.target.parentNode;
+        removeIt.remove();
+        // removeIt.parentNode.removeChild(removeIt);
+      }
+    });
   </script>
 </html>
